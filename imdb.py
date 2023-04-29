@@ -7,7 +7,7 @@ from telegram.ext import Updater, CommandHandler
 
 load_dotenv()
 
-TOKEN = os.getenv('TOKEN')
+TOKEN = os.getenv('5782051762:AAHt6pMRSorbcipQZggT604rI0hGNKJU5Ic')
 
 ia = imdb.IMDb()
 
@@ -27,14 +27,14 @@ def imdb_search(update, context):
             f.write(response.content)
 
     message = f"*Title:* {movie.get('title', 'N/A')}\n"
+    message += f"*Quality:* \n"
     message += f"*Year:* {movie.get('year', 'N/A')}\n"
     message += f"*Genres:* {', '.join(movie.get('genres', ['N/A']))}\n"
     message += f"*IMDb URL:* https://www.imdb.com/title/{movie.getID()}\n"
     message += f"*Country:* {', '.join(movie.get('country', ['N/A']))}\n"
     message += f"*Languages:* {', '.join(movie.get('languages', ['N/A']))}\n"
-    message += f"*Quality:* \n"
     message += f"*Subtitles:* \n"
-    message += f"\n{movie.get('plot outline', 'N/A')}"
+    message += f"Story Line:*\n{movie.get('plot outline', 'N/A')}"
 
     # Send message with poster image
     context.bot.send_photo(chat_id=update.effective_chat.id, photo=open('poster.jpg', 'rb'))
