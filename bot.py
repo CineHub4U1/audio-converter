@@ -57,7 +57,7 @@ def settings(update, context):
 
 def main():
     # create an Updater object and attach it to the bot's API token
-    updater = Updater('YOUR_API_TOKEN_HERE')
+    updater = Updater('5782051762:AAHt6pMRSorbcipQZggT604rI0hGNKJU5Ic')
 
     # create a MessageHandler that will handle audio messages
     audio_handler = MessageHandler(Filters.audio, convert_audio)
