@@ -1,1 +1,1 @@
-web: python imdb.py
+worker: python bot.py
