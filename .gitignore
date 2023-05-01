@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.wav
+*.mp3
+*.aac
+*.ac3
+*.eac3
+*.he-aac
